@@ -2,9 +2,9 @@
 
 A helper package used by other Secure Trading packages.
 
-\Securetrading\Config\Config accepts a multi-dimensional array in its constructor.
+`\Securetrading\Config\Config` accepts a multi-dimensional array in its constructor.
 
-Calls to the instance methods 'has', 'get' and 'set' can then be used to easily manipulate entries in the multidimensional array.
+Calls to the instance methods `has()`, `get()` and `set()` can then be used to easily manipulate entries in the multi-dimensional array.
 
 Example:
 
