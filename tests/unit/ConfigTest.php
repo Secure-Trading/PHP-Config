@@ -5,7 +5,7 @@ namespace Securetrading\Config\Tests\Unit;
 class ConfigTest extends \Securetrading\Unittest\UnittestAbstract {
   protected $_config;
 
-  public function setUp() {
+  public function setUp() : void {
     $data = $this->_getConfigData();
     $this->_config = new \Securetrading\Config\Config($data);
   }
@@ -69,10 +69,11 @@ class ConfigTest extends \Securetrading\Unittest\UnittestAbstract {
 
   /**
    * @dataProvider providerGet_KeysThatDoNotExist()
-   * @expectedException \Securetrading\Config\ConfigException
-   * @expectedExceptionCode \Securetrading\Config\ConfigException::CODE_KEY_DOES_NOT_EXIST
    */
   public function testGet_KeysThatDoNotExist($keyToGet) {
+    $this->expectException(\Securetrading\Config\ConfigException::class);
+    $this->expectExceptionCode(\Securetrading\Config\ConfigException::CODE_KEY_DOES_NOT_EXIST);
+      
     $this->_config->get($keyToGet);
   }
 
