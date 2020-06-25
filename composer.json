@@ -4,7 +4,7 @@
   "description" : "Secure Trading's Config package for parsing INI files.",
   "license" : "MIT",
   "require" : {
-    "php" : ">=5.3.0",
+    "php" : "^7.3",
     "securetrading/exception" : "^1.0",
     "securetrading/ioc" : "^2.0"
   },
